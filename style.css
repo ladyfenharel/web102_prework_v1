@@ -2,7 +2,10 @@
 
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: #e0e3e8;
+    text-align: center;
+    margin: 0px;
+    padding:0px;
 }
 
 #tentacles {
@@ -11,12 +14,15 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
-    padding: 1%;
+    font-family: 'New Amsterdam';
+    font-size: 2em;
+    text-transform: uppercase;
+    justify-content: center;
     align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
+    background-color: #FFFFFF;
+    color: #758190;
+    padding: 0px;
+    margin:0px;
 }
 
 .stats-container {
@@ -25,13 +31,15 @@ body {
     align-items: top;
 }
 
+/* Removed the below hover effect because it gives impression that the stats container is clickable- bad ux design
 .stats-container:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
-}
+    box-shadow: 0 0 30px darkslategrey;
+}*/
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: #536075;
+    color: white;
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
@@ -62,11 +70,12 @@ body {
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    transition: box-shadow .3s ease;
 }
 
 .game-card:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    box-shadow: 0 0 22px rgba(33,33,33,.5);
 }
 
 #button-container {
@@ -75,8 +84,34 @@ body {
 
 button {
     font-family: 'Cabin';
-    border: none;
+    border: 2px solid;
+    border-color: #e0e3e8;
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    transition: all .2s ease;
+    background-color:#f7f9fb;
+}
+
+/* Added hover states to buttons to emphasize state */
+
+button:hover {
+    cursor: pointer;
+    background-color: #868e9c !important;
+    color: white;
+    border-color: #868e9c;
+    transition: all .2s ease;
+}
+
+button:active {
+    background-color:#868e9c;
+    color: white;
+    transition: all .2s ease;
+}
+
+button:focus {
+    border-width: 2px;
+    border-color:#758190;
+    background-color: #e0e3e8;
+    transition: all .2s ease;
 }
