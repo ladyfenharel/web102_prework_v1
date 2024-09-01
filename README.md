@@ -17,17 +17,26 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-* [ ] Disabled shadow hover for stats- bad ux design to make hoverable effect if not clickable (assumed games hover leads to donation link)
-* [ ] Added hover states for filter buttons- emphasize clickability and let user know where they are
-* [ ] Stylized the page for stronger design, including importing a custom font for header
+* [x] Disabled shadow hover for stats- bad ux design to make hoverable effect if not clickable (assumed games hover leads to donation link)
+* [x] Added hover states for filter buttons- emphasize clickability and let user know where they are
+* [x] Stylized the page for stronger design, including importing a custom font for header
 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
 
+Total raised and unfunded games in the description
+<img src='https://i.imgur.com/jID3vel.gif'>
+
+Updating Stats
+<img src='https://i.imgur.com/eVO4SWF.gif'>
+
 Button Hover States
 <img src='https://i.imgur.com/T9YDKjv.gif' title='Buttons Walkthrough' width='' alt='Buttons Walkthrough' />
+
+Buttons Sorting Games
+<img src='https://i.imgur.com/UZkLhzZ.gif'>
 
 Game Card Hovers
 <img src='https://i.imgur.com/6XxvtGa.gif' title='Card Walkthrough' width='' alt='Card Walkthrough' />
