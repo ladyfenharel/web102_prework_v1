@@ -32,11 +32,8 @@ Total raised and unfunded games in the description
 Updating Stats
 <img src='https://i.imgur.com/eVO4SWF.gif'>
 
-Button Hover States
+Button Hover States to Sort Games
 <img src='https://i.imgur.com/T9YDKjv.gif' title='Buttons Walkthrough' width='' alt='Buttons Walkthrough' />
-
-Buttons Sorting Games
-<img src='https://i.imgur.com/UZkLhzZ.gif'>
 
 Game Card Hovers
 <img src='https://i.imgur.com/6XxvtGa.gif' title='Card Walkthrough' width='' alt='Card Walkthrough' />
