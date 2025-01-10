@@ -1,44 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
-    font-family: 'Cabin';
+    font-family: 'Inter', 'Helvetica Neue', Arial, Helvetica, sans;
+    color: #333;
     background-color: #e0e3e8;
     text-align: center;
     margin: 0px;
     padding:0px;
 }
 
-#tentacles {
-    width: 50px;
-}
-
 .header {
     display: flex;
-    font-family: 'New Amsterdam';
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0% 2em;
+    margin: 0px;
+    color: white;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 1em;
+    color: #32569d;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.logo-title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#logo {
+    width: 250px;
+    padding: 0px 0.5em;
+}
+
+.header-text {
     font-size: 2em;
     text-transform: uppercase;
-    justify-content: center;
-    align-items: center;
-    background-color: #FFFFFF;
-    color: #758190;
-    padding: 0px;
-    margin:0px;
+    margin-left: 2px;
+}
+
+.navigation {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 2em;
+    color: #cf6399;
+    font-weight:700;
+    transition: all 1s ease-out;
+}
+
+.navigation a:hover {
+    color: #32569d;
+}
+
+.introduction {
+    position: relative;
+    padding: 10%;
+    background: #ffffff;
+    background-size: cover;
+}
+
+.overview {
+    color:#536075
+}
+
+#description-container {
+    position: relative;
+    padding: 2% 10%;
+    background: #ba5671;
+    color: white;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.top-games-stats-container {
+    padding: 3% 10%;
+    margin: 3% 0;
 }
 
 .stats-container {
     display: flex;
     flex-direction: row;
     align-items: top;
+    padding: 0 10%;
+    margin: 3% 0;
 }
 
-/* Removed the below hover effect because it gives impression that the stats container is clickable- bad ux design
 .stats-container:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px darkslategrey;
-}*/
+    box-shadow: 0 0 30px #32569d;
+}
 
 .stats-card {
-    background-color: #536075;
+    background-color: #32569d;
     color: white;
     border-radius: 7px;
     padding: 1%;
@@ -49,69 +127,194 @@ body {
 
 #num-contributions, #total-raised, #num-games {
     font-size: 50px;
+    font-weight: 700;
+}
+
+#games {
+    background-color: #32569d;
+    padding: 5% 1%;
+    color: #fff;
+}
+
+#games h2 {
+    color: white;
+}
+
+#games h3 {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform:capitalize;
 }
 
 #games-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 15px; /* Consistent spacing between */
+    padding: 20px 3%;
+    color: #333 ;
 }
 
 .game-img {
     width: 100%;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
 }
 
 .game-card {
     background-color: #FFFFFF;
-    padding: 1%;
-    margin: 1%;
+    padding: 30px;
+    margin: 5px;
     width: 300px;
     text-align: center;
-    border-radius: 7px;
-    transition: box-shadow .3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .game-card:hover {
     cursor: pointer;
-    box-shadow: 0 0 22px rgba(33,33,33,.5);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.game-card p {
+    line-height: 1.5;
+    color: #666;
 }
 
 #button-container {
     text-align: center;
+    padding: 2% 1%;
 }
 
 button {
-    font-family: 'Cabin';
-    border: 2px solid;
-    border-color: #e0e3e8;
-    padding: 1%;
+    font-family: 'Inter';
+    color: white;
+    border: 1px solid;
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 1.2em 2.2em;
     margin: 1%;
-    border-radius: 7px;
+    border-radius: 30px;
     transition: all .2s ease;
-    background-color:#f7f9fb;
 }
 
-/* Added hover states to buttons to emphasize state */
+/* Added hover states to buttons to emphasize states */
 
 button:hover {
     cursor: pointer;
-    background-color: #868e9c !important;
-    color: white;
-    border-color: #868e9c;
+    background-color: #ba5671 !important;
+    color: white !important;
+    border-color: #ba5671 !important;
     transition: all .2s ease;
 }
 
 button:active {
-    background-color:#868e9c;
-    color: white;
     transition: all .2s ease;
+    color:#f8c1d9 !important;
 }
 
 button:focus {
-    border-width: 2px;
-    border-color:#758190;
-    background-color: #e0e3e8;
+    border-color:white;
+    background-color: white;
+    color: #32569d;
     transition: all .2s ease;
+}
+
+/* Added footer to page */
+.footer {
+    padding: 1.2% 2em;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+/* Added search icon and lightbox for search functionality */
+.search {
+    position: fixed;
+    bottom: 0.5%;
+    right: 2%;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+    padding:1em;
+    background-color:#ffffff75;
+    border-radius: 100%;
+    z-index: 1000;
+    transition: all 0.2s ease;
+}
+
+.search:hover {
+    background-color: #ffffff95;
+}
+
+#search-icon {
+    color: #32569d;
+}
+
+#search-icon:hover {
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+#search-icon:active {
+    color:#ba5671;
+    transition: color 0.2s ease;
+}
+
+#lightbox {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(126, 150, 227, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#search {
+    width: 300px;
+    padding: 0.5em;
+    border: 1px solid #ba5671;
+    border-radius: 5px;
+}
+
+#search-container {
+    display:flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    background-color: #32569d;
+    padding: 2em 3em;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#search-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 1em;
+    border: 1px solid #ba5671;
+    border-radius: 25px;
+    background-color: #ffffff;
+    width: 70%;
+    transition: all 0.35s ease;
+}
+
+#search-input:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(119, 32, 64, 0.4);
+    width: 100%;
+}
+
+#search-input:focus {
+    width:100%;
 }

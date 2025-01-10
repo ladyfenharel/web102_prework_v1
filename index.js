@@ -40,7 +40,7 @@ function addGamesToPage(games) {
         // about each game
 
         gameCardDiv.innerHTML = `
-            <h2>${games[i].name}</h2>
+            <h3>${games[i].name}</h3>
             <p>${games[i].description}</p>
             <p>Pledged: ${games[i].pledged.toLocaleString()}</p>
             <p>Goal: ${games[i].goal.toLocaleString()}</p>
@@ -199,3 +199,50 @@ runnerUpPledgeGameElement.textContent = secondName;
 
 const runnerUpPledgeGameDiv = document.getElementById("second-game");
 runnerUpPledgeGameDiv.appendChild(runnerUpPledgeGameElement);
+
+
+/************************************************************************************
+ * Extra Challenge: Add a search bar to the page
+ * Skills used: DOM manipulation, event listeners, functions
+ */
+ // Show the lightbox when clicking the search icon
+document.getElementById("search-icon").addEventListener("click", function () {
+    const lightbox = document.getElementById("lightbox");
+    lightbox.style.display = "flex"; // Show the lightbox
+});
+
+// Hide the lightbox when clicking outside the search container
+document.getElementById("lightbox").addEventListener("click", function (event) {
+    // Check if the click is on the lightbox itself (not the search container)
+    if (event.target.id === "lightbox") {
+        this.style.display = "none"; // Hide the lightbox
+    }
+});
+
+// Search functionality
+// Grab the search input and the search button
+const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+
+function filterSearchOnly() {
+    deleteChildElements(gamesContainer);
+
+    // use filter() to get a list of games that have met or exceeded their goal
+    let listOfSearchGames = GAMES_JSON.filter ( (game) => {
+        return game.pledged >= game.goal;
+    })
+
+    // use the function we previously created to add unfunded games to the DOM
+    addGamesToPage(listOfFundedGames);
+}
+
+// Listen for click on search button
+
+// Simplify search query so there's no issue with capitalization
+
+// Cycle through games to find simplified search query
+
+
+
+
+
