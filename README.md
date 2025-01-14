@@ -10,13 +10,10 @@ Time spent: **3.5** hours spent in total
 
 The following **required** functionality is completed:
 
-* [x] **Introduction Section:** Provides an overview of Sea Monster Crowdfunding, including the company's mission and the current count of games that remain unfunded.
-* [x] **Stats Section:** Displays key metrics such as the total number of contributions, the total amount of funds raised, and highlights the top two most funded games for added context.
-* [x] **Our Games Section (Default View):** Shows all games supported by Sea Monster Crowdfunding, giving users an overview of both funded and unfunded games.
-* [x] **Filter Buttons in Our Games Section:** Includes three interactive buttons that allow users to easily switch between viewing:
-* * [x] Only unfunded games,
-* * [x] Only funded games, or
-* * [x] All games.
+* [x]  The introduction section explains the background of the company and how many games remain unfunded.
+* [x] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+* [x] The Our Games section initially displays all games funded by Sea Monster Crowdfunding.
+* [x] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 <br>
 
 The following **optional** features are implemented:
@@ -59,9 +56,20 @@ GIFs created with [Kap](https://getkap.co/) for macOS
 
 This JavaScript code dynamically imports JSON data into the website to display relevant game information. The data is loaded using standard JavaScript methods and manipulated with functions like `reduce` to calculate specific values, such as the number of unfunded games. The script then updates the DOM by appending these calculated results to designated HTML elements, ensuring that the website's content remains accurate and up-to-date based on the provided JSON data. This approach allows for easy integration and real-time updates of game statistics on the webpage.
 
+Throughout the development of this project, there were a few key challenges that required careful consideration and problem-solving:
+
+### Search Icon and Input Positioning
+One of the challenges was deciding on the best placement for the search icon and input field to ensure a user-friendly interface. Initially, it was tricky to position the elements in a way that felt intuitive while maintaining a clean design. After experimenting with various layouts, I decided to place the search icon inside a button next to the other filters, and the input field was placed within a collapsible container that only appeared when the button was clicked. This approach balanced both functionality and aesthetic appeal.
+
+### Implementing the CSS Drop-Down Feature
+Another challenge was implementing the CSS-based drop-down effect for the search bar. The goal was to create a smooth, animated transition when the search bar appeared and disappeared. Initially, getting the animation to work correctly was difficult, especially with ensuring the search container's height adjusted dynamically based on content. After some trial and error with max-height and overflow properties, I was able to achieve a clean, smooth drop-down effect that was both functional and visually appealing.
+
+These challenges, while tricky at times, provided an opportunity to learn more about CSS animations and the importance of user-centered design.
+
+
 ## License
 
-    Copyright 2025 AStone
+    Copyright 2025 Amanda Stone
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
