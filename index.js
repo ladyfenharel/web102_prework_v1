@@ -205,44 +205,39 @@ runnerUpPledgeGameDiv.appendChild(runnerUpPledgeGameElement);
  * Extra Challenge: Add a search bar to the page
  * Skills used: DOM manipulation, event listeners, functions
  */
- // Show the lightbox when clicking the search icon
-document.getElementById("search-icon").addEventListener("click", function () {
-    const lightbox = document.getElementById("lightbox");
-    lightbox.style.display = "flex"; // Show the lightbox
-});
+// Grab the toggle button and search container
+const toggleSearchBtn = document.getElementById("toggle-search-btn");
+const searchContainer = document.getElementById("search-container");
 
-// Hide the lightbox when clicking outside the search container
-document.getElementById("lightbox").addEventListener("click", function (event) {
-    // Check if the click is on the lightbox itself (not the search container)
-    if (event.target.id === "lightbox") {
-        this.style.display = "none"; // Hide the lightbox
+// Toggle the open class to slide the search bar
+toggleSearchBtn.addEventListener("click", function () {
+    if (searchContainer.classList.contains("open")) {
+        searchContainer.classList.remove("open");
+    } else {
+        searchContainer.classList.add("open");
     }
 });
 
 // Search functionality
-// Grab the search input and the search button
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 
 function filterSearchOnly() {
     deleteChildElements(gamesContainer);
 
-    // use filter() to get a list of games that have met or exceeded their goal
-    let listOfSearchGames = GAMES_JSON.filter ( (game) => {
-        return game.pledged >= game.goal;
-    })
+    const query = searchInput.value.toLowerCase();
 
-    // use the function we previously created to add unfunded games to the DOM
-    addGamesToPage(listOfFundedGames);
+    // Filter games that match the search query
+    let listOfSearchGames = GAMES_JSON.filter((game) => {
+        return game.name.toLowerCase().includes(query);
+    });
+
+    // Add the filtered games to the DOM
+    addGamesToPage(listOfSearchGames);
 }
 
-// Listen for click on search button
-
-// Simplify search query so there's no issue with capitalization
-
-// Cycle through games to find simplified search query
-
-
+// Add event listener to the search button
+searchBtn.addEventListener("click", filterSearchOnly);
 
 
 
